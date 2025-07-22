@@ -420,7 +420,7 @@ async def resolve_extracted_edge(
     llm_response = await llm_client.generate_response(
         prompt_library.dedupe_edges.resolve_edge(context),
         response_model=EdgeDuplicate,
-        model_size=ModelSize.small,
+        model_size=ModelSize.medium, 
     )
 
     duplicate_fact_ids: list[int] = list(
